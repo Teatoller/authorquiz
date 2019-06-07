@@ -9,7 +9,37 @@ const authors = [
         name: 'Mark Twain',
         imageUrl: 'images/authors/marktwain.jpeg',
         imageSource: 'Wikipedia Commons',
-        books: ['The Adventures of Huckleberry Finn']
+        books: ['The Adventures of Huckleberry Finn', 'Life on the Mississippi', 'Roughing It']
+    },
+    {
+        name: 'Charles Dickens',
+        imageUrl: 'images/authors/charlesdickens.jpeg',
+        imageSource: 'Wikipedia Commons',
+        books: ['David Copperfield', 'A Tale of Two Cities']
+    },
+    {
+        name: 'J.K Rowling',
+        imageUrl: 'images/authors/jkrowling.jpeg',
+        imageSource: 'Wikipedia Commons',
+        books: ['Harry Porter and the Socerers Stone']
+    },
+    {
+        name: 'Joseph Conrad',
+        imageUrl: 'images/authors/josephconrad.jpeg',
+        imageSource: 'Wikipedia Commons',
+        books: ['Heart of Darkness']
+    },
+    {
+        name: 'Stephen King',
+        imageUrl: 'images/authors/stephenking.jpeg',
+        imageSource: 'Wikipedia Commons',
+        books: ['The Shinning', 'IT']
+    },
+    {
+        name: 'William Shakespear',
+        imageUrl: 'images/authors/williamshakespear.jpeg',
+        imageSource: 'Wikipedia Commons',
+        books: ['Hamlet', 'Macbeth', 'Romeo and Juliet']
     }
 ];
 
