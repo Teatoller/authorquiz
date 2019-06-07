@@ -35,7 +35,6 @@ function Footer() {
 };
 
 function AuthorQuiz({turnData}) {
-  console.log(turnData);
     return (
       <div className="container-fluid">
         <Hero/>
