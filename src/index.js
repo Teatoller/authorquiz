@@ -41,6 +41,18 @@ const authors = [
         imageUrl: 'images/authors/williamshakespear.jpeg',
         imageSource: 'Wikipedia Commons',
         books: ['Hamlet', 'Macbeth', 'Romeo and Juliet']
+    },
+    {
+        name: 'Chinua Achebe',
+        imageUrl: 'images/authors/chinuaachebe.jpeg',
+        imageSource: 'Wikipedia Commons',
+        books: ['Things Fall Apart', 'Arrow of God', 'No Longer at Ease', 'A  Man of the People']
+    },
+    {
+        name: 'Grace Ogot',
+        imageUrl: 'images/authors/graceogot.jpeg',
+        imageSource: 'Wikipedia Commons',
+        books: ['Land Without Thunder', 'The Other Woman', 'The Strange Bride']
     }
 ];
 
@@ -64,8 +76,16 @@ const state = {
     highlight: ''
 };
 
+function onAnswerSelected(answer) {
+    const isCorrect = state.turnData.author.books.some((book) => book === answer);
+    state.highlight = isCorrect ? 'correct' : 'wrong';
+    render();
+};
 
-ReactDOM.render(<AuthorQuiz {...state} />, document.getElementById('root'));
+function render() {
+    ReactDOM.render(<AuthorQuiz {...state} onAnswerSelected={onAnswerSelected}/>, document.getElementById('root'));
+};
+render();
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
