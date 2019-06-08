@@ -60,7 +60,8 @@ function getTurnData(authors) {
 };
 
 const state = {
-    turnData: getTurnData(authors)
+    turnData: getTurnData(authors),
+    highlight: ''
 };
 
 
