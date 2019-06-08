@@ -17,7 +17,7 @@ const state = {
         },
     },
     highlight: 'none'
-};
+}
 
 describe("Authour Quiz", () => {
     it('renders without crashing', () => {
@@ -56,28 +56,30 @@ describe("Authour Quiz", () => {
                 <AuthorQuiz {...(Object.assign({}, state, {highlight: 'correct'}))} onAnswerSelected={() => {
                 }}/>);
         });
-        it('Should have a red background color', () => {
+        it('Should have a green background color', () => {
             expect(wrapper.find("div.row.turn").props().style.backgroundColor).toBe('green');
         });
     });
 
-    describe("When the correct answer has been selected", () => {
+
+    describe("When the first answer is selected", () => {
         let wrapper;
         const handleAnswerSelected = jest.fn();
+
         beforeAll(() => {
             wrapper = mount(
                 <AuthorQuiz {...state} onAnswerSelected={handleAnswerSelected}/>);
-            wrapper.find('answer').first().simulate('click');
+            wrapper.find('.answer').first().simulate('click');
+        });
 
-            it('onAnswerselected on answer should be called', () => {
-                expect(handleAnswerSelected).toHaveBeenCalled();
-            });
+        it("onAnswerSelected should be called", () => {
+            expect(handleAnswerSelected).toHaveBeenCalled();
+        });
 
-            it('should receive The Adventures of Huckleberry Finn ', () => {
-              expect(handleAnswerSelected).toHaveBeenCalledWith('The Adventures of Huckleberry Finn');
-          });
-
+        it('should receive The Adventures of Huckleberry Finn ', () => {
+            expect(handleAnswerSelected).toHaveBeenCalledWith("The Adventures of Huckleberry Finn");
         });
     });
+
 });
 
