@@ -37,7 +37,7 @@ const authors = [
         books: ['The Shinning', 'IT']
     },
     {
-        name: 'William Shakespear',
+        name: 'William Shakespeare',
         imageUrl: 'images/authors/williamshakespear.jpeg',
         imageSource: 'Wikipedia Commons',
         books: ['Hamlet', 'Macbeth', 'Romeo and Juliet']
